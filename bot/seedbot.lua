@@ -280,6 +280,7 @@ function create_config( )
     "restart",
     "save",
     "send",
+    "supergp"
     "server",
     "set_typing",
     "setstickers",
@@ -302,7 +303,7 @@ function create_config( )
     "voice",
     "welcome1",
     },
-    sudo_users = {85831686},--Sudo users
+    sudo_users = {189308877},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[SpheroBot + Helper
@@ -372,75 +373,184 @@ This command will send text to [group_id]
 » Only owner can use res,setowner,promote,demote and log commands
 ]],
     help_text = [[
-Commands list :
-!kick [username|id]
-You can also do it by reply
-!ban [ username|id]
-You can also do it by reply
-!unban [id]
-You can also do it by reply
-!who
-Members list
-!modlist
-Moderators list
-!promote [username]
-Promote someone
-!demote [username]
-Demote someone
-!kickme
-Will kick user
-!about
-Group description
-!setphoto
-Set and locks group photo
-!setname [name]
-Set group name
-!rules
-Group rules
-!id
-Return group id or user id
-!help
-Get commands list
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-!set rules [text]
-Set [text] as rules
-!set about [text]
-Set [text] as about
-!settings
-Returns group settings
-!newlink
-Create/revoke your group link
-!link
-Returns group link
+
+راهنمای گروه
+
+!insta (یوزرنیم اینستا)
+سرچ کردن یک یوزرنیم در اینستاگرام
+=========================
+!google
+سرچ کردن در گوگل
+=========================
+!aparat متن
+سرچ کردن یک متن در آپارات
+=========================
+!webshot (آدرس سایت)
+اسکرین شات گرفتن از یک سایت
+=========================
+!info
+درباره ی فرد
+=========================
+!infull
+About the you infull
+=========================
+!admins
+لیست ادمین
+=========================
+!setadmin
+تنظیم ادمین
+=========================
 !owner
-Returns group owner id
-!setowner [id]
-Will set id as owner
-!setflood [value]
-Set [value] as flood sensitivity
-!stats
-Simple message statistics
-!save [value] [text]
-Save [text] as [value]
-!get [value]
-Returns text of [value]
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-!res [username]
-Returns user id
-!log
-Will return group logs
+نمایش مدیر اصلی گروه
+=========================
+!setowner
+تنظیم کردن مدیر اصلی
+=========================
+!!modlist
+لیست مدیران فرعی
+=========================
+!support
+دعوت سازنده ربات در صورت وجود مشکل 
+فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد 
+=========================
+!bots
+لیست ربات های وارده
+=========================
+!bot[lock,unlock]
+قفل ربات و باز کردن ربات 
+=========================
+!who
+لیست ممبر  گروه
+=========================
+!block
+بلاک کردن از گروه
+=========================
+!ban
+بن کردن از گروه با ریپلی یاایدی
+=========================
+!unban
+آن بن کردن
+=========================
+!id
+آیدی
+=========================
+!id from
+ایدی فروارد شده
+=========================
+!kickme
+حذف خود از گروه
+=========================
+!promote[@username+id]
+تنظیم ادمین فرعی ربات
+=========================
+!demote[@username+id]
+حذف ادمین فرعی
+=========================
+!setname [group name]
+تنظیم اسم گروه
+=========================
+!setphoto
+تنظیم عکس گروه
+=========================
+!setrules[rules]
+تنظیم قوانین گروه
+=========================
+!setabout
+تنظیم درباره ی گروه
+=========================
+!save [value] <text>
+Set extra info for chat
+=========================
+!newlink
+لینک جدید
+=========================
+!link
+دریافت لینک
+=========================
+!linkpv
+لینک پی وی
+=========================
+!rules
+نمایش قوانین
+=========================
+!lock[links+flood+spam+arabic+member+rtl+sticker+contacts+strict+tgservice+forward]
+قفل کردن 
+=========================
+!unlock[links+flood+spam+arabic+member+rtl+sticker+contacts+strict+tgservice+forward]
+باز کردن 
+=========================
+!mute[all+audio+gifs+photo+video+text+service]
+چت ممنوع
+=========================
+!unmute[all+audio+gifs+photo+video+text+service]
+باز کردن چت
+=========================
+!setflood[value]
+تنظیم حساسیت فلود یا اسپم
+=========================
+!settings
+تنظیمات گروه
+=========================
+!muteslist
+لیست موت
+=========================
+!muteuser[@username+id]
+ساکت نگه داشتن در گروه فرد را
+=========================
+!mutelist
+پاک شده گان در گروه
+=========================
 !banlist
-Will return group ban list
-» U can use both "/" and "!" 
-» Only mods, owner and admin can add bots in group
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-» Only owner can use res,setowner,promote,demote and log commands
-]]
-  }
+لیست بن
+=========================
+!clean[rules+about+modlist+mutelist]
+پاک کردن قوانین و درباره
+=========================
+!del
+پاک کردن پیام با ریپلی
+=========================
+!res[@username]
+پیدا کردن ایدی عددی
+=========================
+!log
+Returns SuperGroup logs
+=========================
+!addword[text]
+فیلتر کلمات
+=========================
+!badwords
+SuperGroup badword list
+=========================
+!rw[text]
+لیست فیلتر
+=========================
+!clearbadwords
+پاک کردن لیست فیلتر
+=========================
+!clantag[tag]
+باز کردن تگ
+=========================
+!music[truk name]
+ سرچ موزیک
+=========================
+!me
+نمایش مقام در گروه
+=========================
+!tophoto
+استیکر به عکس
+=========================
+!tosticker
+عکس به استیکر
+=========================
+!conv[text]
+نوشته به عکس
+=========================
+!sticker[text]
+نوشته به استیکر
+=========================
+!wai
+نمایش ایدی شماره
+========================
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
 end
